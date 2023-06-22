@@ -10,6 +10,7 @@ int main()
     }
     for (int y=10;  y <20; y++) {
         printf( "%d\n", y*y*y);
+        printf( "%d\n", y*y);
 
     }
 
