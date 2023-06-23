@@ -1,19 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int main()
-{
+#include <stdio.h>
+int main() {
 
-    for (int n=0;  n <10; n++) {
-        printf( "%d\n", n*n);
+  int i, o;
 
-    }
-    for (int y=10;  y <20; y++) {
-        printf( "%d\n", y*y*y);
-        printf( "%d\n", y*y);
+  int c1 = 0, c2 = 1;
 
-    }
+  int nextTerm = c1 + c2;
 
+  printf("wedite skolko budit chisel vibonarichi   ");
+  scanf("%d", &o);
 
-    return 0;
+  printf("vibonarichi shisla   %d, %d, ", c1, c2);
+
+  for (i = 3; i <= o; ++i) {
+    printf("%d, ", nextTerm);
+    c1 = c2;
+    c2 = nextTerm;
+    nextTerm = c1 + c2;
+  }
+
+  return 0;
 }
